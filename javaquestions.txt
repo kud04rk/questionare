@@ -1,0 +1,439 @@
+java questions
+Java Platform
+1 . Why is Java so popular?
+java is so popular beacuse of platform independence,meaing java can runon any computer with anyarchitecture.java runs on any computer with java runtime environment JRE.
+2 . What is platform independence?
+it means it can run on any platform .after compilation.
+steps
+javac compiles the code and converts into class file which is byte code and not the machine code native.
+The byte code genearted is a non-excututable code and needs to be interpreter to exceute and thus the byte code is executed by the JVM.
+3 . What is bytecode?
+byte code is a form of code which is designed for efficient excecutionof by a software interpreter
+4 . Compare JDK vs JVM vs JRE
+JVM:java virtual machine is a  abstract class. it deosnt exist physically. it is a runtime environment in which  a java byte code which can be executed
+main tasks of jvm:loads code
+verifies code
+excetues code
+provides runtime environment
+JRE
+it means java runtime environment.it is a set of software tools which are used for developing java applications,it contains libraries and other files that jvm uses at runtime.
+JDK
+it is short form for java developemnt kit.It is a software development environment which is used to develop applications and applets. it contains jre jvm and development tools like javac.
+5 . What are the important differences between C++ and Java?
+plat form dependent plat form idenpendent.doesnt support threads supports threads
+6 . What is the role for a classloader in Java?
+class loader in java is a part of runtime environment which dynamically loads classes into java virtual machine.not all at once but when ever required.
+Wrapper Classes
+7 . What are Wrapper classes?
+it contains primitive data types, we can wrap primitive data types into a wrapper class
+8 . Why do we need Wrapper classes in Java?
+to convert simple data types into objects and to give object from to a data type
+to convert strings into data types
+9 . What are the different ways of creating Wrapper class instances?
+10 . What are differences in the two ways of creating Wrapper classes?
+11 . What is auto boxing?
+converting primitive value into a object of wrapper class
+12 . What are the advantages of auto boxing?
+no need for convertiuon hence less code is required.
+13 . What is casting?
+assigning value of a primitive data tyep to another.
+14 . What is implicit casting?
+it means casting into compatible operators. such as int to double.
+15 . What is explicit casting?
+this requires converting the type of the incompatible types such as converting float to int or string.
+Strings
+15.5 .what is immutable?
+immutable means once the constructor for an object is completed execution that instace cant be altered.
+a immutable class is a class which cant be altered after creation
+these are thread safe.
+16 . Are all String’s immutable?
+yes by default String is immutable
+17 . Where are String values stored in memory?
+they are stored in the heap memory
+17.5 .what is heap memory?
+heap memory a storage in ram where it is allocated dynamically and is larger. this memory is needs to freed to avoid mamory leaks
+18 . Why should you be careful about String concatenation(+) operator in loops?
+since string is immutabel everytime you concatinate then it create a new string in the heap memory
+19 . How do you solve above problem?
+20 . What are differences between String and StringBuffer?
+strings are stored in string pool ins java heap.string buffer is directely stored in heap and is mutable
+strings are thread safe stringbuffer are not thread safe
+string access is fast but strig buffer access is slow
+string buffer is a special class which is mutable and has more functionality such as insert delete replace etc
+21 . What are differences between StringBuilder and StringBuffer?
+both of these are alternatives to string in mutable way but with one difference.
+string builder provides no gurantee for synchronization where as string buffer does.
+string builder stored the characters by using serialicaiton.
+21.2what is thread safe?
+it means that only one thread can access the data at one time.
+22 . Can you give examples of different utility methods in String class?
+concatenate substring concatenate replace delete
+Object oriented programming basics
+23 . What is a class?
+24 . What is an object?
+25 . What is state of an object?
+state of a n object tells the type and value of the object
+26 . What is behavior of an object?
+behaviour of an object tells how the operations can be performed on the object
+27 . What is the super class of every class in Java?
+super is keyword is a reference vriable that is used to refer to parent class objects
+28 . Explain about toString method ?
+to string meathod converts the values such as integer to string
+29 . What is the use of equals method in Java?
+eqauls meathod check the type and also the value.
+30 . What are the important things to consider when implementing equals method?
+generally used for objects
+31 . What is the Hashcode method used for in Java?
+hash code is a number or a key which is calculated and stored when you insert a value into hash set hast map or hashtable.this vaule is used to retrieve the values quickly
+32 . Explain inheritance with examples .
+33 . What is method overloading?
+this helps same functions names to have differnet signatures
+34 . What is method overriding?
+subclass with meathod same meathd name and same signatures but having different logics
+35 . Can super class reference variable can hold an object of sub class?
+no because subclass can have more fuctionality than super class
+36 . Is multiple inheritance allowed in Java?
+no to reduce complexity
+37 . What is an interface?
+it is kind of a blue print for the class. the iterface is firs defined which contains the fuctions.these functions when inmplemanted by the class needs to be used in the class untill java 7 after java 7 only default classes needs to be used.
+38 . How do you define an interface?
+
+39 . How do you implement an interface?
+implents
+40 . Can you explain a few tricky things about interfaces?
+41 . Can you extend an interface?
+yes we can extend an interface.
+42 . Can a class extend multiple interfaces?
+no a class cannot extend multiple interfaces
+43 . What is an abstract class?
+abstract class is a class which contains meathods but no implementation this class can be extended by an other class and defined there.
+44 . When do you use an abstract class?
+you expect that classes that extend you calsses have common meathods and need to have access modifiers other than public
+45 . How do you define an abstract method?
+abstract void meathod name
+46 . Compare abstract class vs interface?
+abstract class is used when closely nit classes need to use the abstract fuctions.
+interfaces can be used by multiple classes and need to have blue prnt of the class.take advantage of multiple inheraitance. any class can implemnt you r interface.
+47 . What is a constructor?
+it is a default meathod which is called when calling a object
+48 . What is a default constructor?
+deafult constructor is a constructor whcihc has not variables
+49 . Will this code compile?
+50 . How do you call a super class constructor from a constructor?
+51 . Will this code compile?
+52 . What is the use of this()?
+53 . Can a constructor be called directly from a method?
+54 . Is a super class constructor called even when there is no explicit call from a sub class constructor?
+Advanced object oriented concepts
+55 . What is polymorphism?
+it means the output can be diplayed in multiple ways
+56 . What is the use of instanceof operator in Java?
+57 . What is coupling?
+it means that one class depends on the implentation of the other class
+loose coupling means its a cahin of cl=oupling in which the couple is not directyly influenced by the other class
+58 . What is cohesion?
+59 . What is encapsulation?
+it means wrapping up of data under singlw unit. it means that data variables re hidden from other classes onyl variables are used in the same class and they are public
+60 . What is an inner class?
+61 . What is a static inner class?
+62 . Can you create an inner class inside a method?
+63 . What is an anonymous class?
+Modifiers
+64 . What is default class modifier?
+65 . What is private access modifier?
+66 . What is default or package access modifier?
+67 . What is protected access modifier?
+68 . What is public access modifier?
+public vs private vs protected
+public access everywhere
+private only the class it is used baclically a local varible.
+protected can be used in class and subclass and package
+69 . What access types of variables can be accessed from a class in same package?
+70 . What access types of variables can be accessed from a class in different package?
+71 . What access types of variables can be accessed from a sub class in same package?
+72 . What access types of variables can be accessed from a sub class in different package?
+73 . What is the use of a final modifier on a class?
+74 . What is the use of a final modifier on a method?
+75 . What is a final variable?
+it can only be initialized once and cannot be modified
+76 . What is a final argument?
+77 . What happens when a variable is marked as volatile?
+78 . What is a static variable?
+conditions & loops
+79 . Why should you always use blocks around if statement?
+80 . Guess the output
+81 . Guess the output
+82 . Guess the output of this switch block .
+83 . Guess the output of this switch block?
+84 . Should default be the last case in a switch statement?
+85 . Can a switch statement be used around a String
+86 . Guess the output of this for loop
+87 . What is an enhanced for loop?
+88 . What is the output of the for loop below?
+89 . What is the output of the program below?
+90 . What is the output of the program below?
+Exception handling
+91 . Why is exception handling important?
+92 . What design pattern is used to implement exception handling features in most languages?
+93 . What is the need for finally block?
+94 . In what scenarios is code in finally not executed?
+in every senario finally block is excecuted
+95 . Will finally be executed in the program below?
+96 . Is try without a catch is allowed?
+not recommended
+97 . Is try without catch and finally allowed?
+without finally allowed
+98 . Can you explain the hierarchy of exception handling classes?
+try- exception io exception etc are expected exception other exceptions are runtime exceptions which are unchecked like divide by 0 null pointer exception
+99 . What is the difference between error and exception?
+error is a unforseen senario like or abnormal behavior like thread killed etc. these are not caught.
+100 . What is the difference between checked exceptions and unchecked exceptions?
+checked exceptions are exceptions are exceptions whcih occour at compile time and inchecked exceptiona re exceptiona re exceptions which occour at runtime.
+101 . How do you throw an exception from a method?
+using throw  like expty stack exception
+102 . What happens when you throw a checked exception from a method?
+catch meathod cathed it and logs it
+103 . What are the options you have to eliminate compilation errors when handling checked exceptions?
+
+104 . How do you create a custom exception?
+in the catch exception we declare a new exceptiojn wchihc the cndition and throw it
+105 . How do you handle multiple exception types with same exception handling block?
+using pipe
+106 . Can you explain about try with resources?
+it is basically the use of file output strea or input stream with a file resource
+it also ensures that the resource which is opened is closed at the end of try block
+107 . How does try with resources work?
+
+108 . Can you explain a few exception handling best practices?
+Miscellaneous topics
+109 . What are the default values in an array?
+dependig on the type of the value array is initilized the compiler return not garbage value like 0 for int null for string
+110 . How do you loop around an array using enhanced for loop?
+for String element: array
+    loops all values in array
+111 . How do you print the content of an array?
+usinf tostring of array
+using arrays.aslist
+using loops
+112 . How do you compare two arrays?
+using equals function
+cant be used for arrays in arrays
+for the above use deepequals
+113 . What is an enum?
+enum is used to represent a group of named constant like colors
+and it is used similar to a class and can be called
+114 . Can you use a switch statement around an enum?
+yes switch can be used in swicth case
+115 . What are variable arguments or varargs?
+varargs are maily used in function to allow zero values
+116 . What are asserts used for?
+asserts are like checks which need not be satified to run the code .
+like assert value > 20 but int value is only 15 and we print the value then we get 15 as out put but if we run using eableassertations then we get error.
+it is generally used for checking logical mishaps
+117 . When should asserts be used?
+118 . What is garbage collection?
+garbage collection is a way of releasing free space in meory .
+119 . Can you explain garbage collection with an example?
+120 . When is garbage collection run?
+deamon thread is run in the background with low prioty and is collectng garbage
+eden space new heap
+s0 next new spcae
+s1 next next new spacve
+tenured or old geneartion are here
+permanent for classes
+121 . What are best practices on garbage collection?
+best way id to set heap size and flasgs for garbage collection in jVM
+122 . What are initialization blocks?
+123 . What is a static initializer?
+124 . What is an instance initializer block?
+125 . What is tokenizing?
+it is a process of spliting the data into multiple subparts like string tokenizer which splits the tockes itno multiple parts
+126 . Can you give an example of tokenizing?
+string tokenization
+127 . What is serialization?
+it is a process of converting object into byte stream
+main adjavtage of this is to save the state and also persist the object along the network
+128 . How do you serialize an object using serializable interface?
+we use write object meathod and pass the object in it
+129 . How do you de-serialize in Java?
+read object is used to deserialize the object
+130 . What do you do if only parts of the object have to be serialized?
+we use part of the object using the getter
+131 . How do you serialize a hierarchy of objects?
+we implement the super class with serializable and then extentend the subclass with the serializethen both get serilized
+132 . Are the constructors in an object invoked when it is de-serialized?
+133 . Are the values of static variables stored when an object is serialized?
+Collections
+134 . Why do we need collections in Java?
+it is a group of objects represented as single object
+135 . What are the important interfaces in the collection hierarchy?
+collection
+set-hashset  linkedhashset
+sortedset-treeset
+list-arraylist,linkedlist,vector
+map-hastmap,linkedhasdmap,hashtable
+sortedmap-treemap
+
+136 . What are the important methods that are declared in the collection interface?
+137 . Can you explain briefly about the List interface?
+138 . Explain about ArrayList with an example?
+it uses dynamic arrarys to store data and it best for retreival but slow in insertion
+139 . Can an ArrayList have duplicate elements?
+yes
+140 . How do you iterate around an ArrayList using iterator?
+4 meathods
+generic for loop
+advanced for loop int i: allaylist
+while size >count
+iterator iterator iter- arrlist.iterator
+iter.hasnext
+
+141 . How do you sort an ArrayList?
+collections.sort in instance of arraylist
+142 . How do you sort elements in an ArrayList using comparable interface?
+we can use create a funtion to compare the vaslues
+143 . How do you sort elements in an ArrayList using comparator interface?
+use compareto function for comporator
+144 . What is vector class? How is it different from an ArrayList?
+vector class is a growing list of array and it can have multiple data types.
+both array list and vectros are same but vectros are syncronized and array list is not . vectror class uses more memory which array list uses lesser size
+145 . What is linkedList? What interfaces does it implement? How is it different from an ArrayList?
+list interface implements it. it is doubly list list it can be used as list or queue.
+it is easir to push and pop but daata retrieval is slow
+array list data retreival is fast
+146 . Can you briefly explain about the Set interface?
+a set interface is a collection which cannot duplicate elements
+allows equals and hashcode
+
+147 . What are the important interfaces related to the Set interface?
+sorted and normal
+148 . What is the difference between Set and sortedSet interfaces?
+
+sorted set arranges the elements in assending order while unsorted set doesnt
+149 . Can you give examples of classes that implement the Set interface?
+hastest linked hashset treeset
+150 . What is a HashSet?
+it is a set which uses hashcode and doent gurantee the order of the insertion
+it is serlizable and clonable no duplicates
+151 . What is a linkedHashSet? How is different from a HashSet?
+it is a set which uses linked hasmap and maintaines the order of insertionit a avrage performer
+insertion and deletion are fast
+hashset is the fastest to read with no order
+152 . What is a TreeSet? How is different from a HashSet?
+treeset is a sorted set with assending order when comperator is not given.
+least performance as it uses comperator to order the values
+153 . Can you give examples of implementations of navigableSet?
+it is sorted set interface, which ca order in reverse order as well
+154 . Explain briefly about Queue interface?
+queue interface is a queue with first in firout policy
+155 . What are the important interfaces related to the Queue interface?
+priority queue
+blocking queue
+deque
+156 . Explain about the Deque interface?
+it is a double ended queue which is fifo or lifo
+it is faster than stack and linked list
+157 . Explain the BlockingQueue interface?
+it is mainly used whie threading it can only be used while by one thread at a time when it is at full or nill capacity.it uses lifo
+158 . What is a priorityQueue?
+it is a queue which uses fifo but when uses comperator to set the priority based on a function . then the values are procesed . it is not stuible for threading.
+159 . Can you give example implementations of the BlockingQueue interface?
+
+160 . Can you briefly explain about the Map interface?
+map interface uses key value apirs to store values
+161 . What is difference between Map and sortedMap?
+sorted map sorts the values based on natural order of the keys while the map doesnt.
+162 . What is a HashMap?
+it is map which doesnt allow duplicate keys and is fast becsues of hashing it is not orderred
+163 . What are the different methods in a Hash Map?
+is empty putall remove foreach replce etc
+164 . What is a TreeMap? How is different from a HashMap?
+tree map is a sorted map which sorts the values based on the keys.
+hash allows null tree doent as it has to sort it less performance
+165 . Can you give an example of implementation of navigableMap interface?
+
+166 . What are the static methods present in the collections class?
+Advanced collections
+167 . What is the difference between synchronized and concurrent collections in Java?
+ynchronized collection can be accesssed by only one thread at a time while concurrent colleciton can be used by multiple colecitons ex hashset hasmap priority queue and all sorted list and sets
+168 . Explain about the new concurrent collections in Java?
+
+169 . Explain about copyonwrite concurrent collections approach?
+every change done in the colleciton incurs a news cloned collection
+170 . What is compareandswap approach?
+
+171 . What is a lock? How is it different from using synchronized approach?
+locking is also a way of synchronization between threads. it locks the acces to the data and then syncronized.
+172 . What is initial capacity of a Java collection?
+no deafult value like vector 10 array list 10 but in java 8 it can be empty
+173 . What is load factor?
+it decides when to increase the size fo the collection .
+174 . When does a Java collection throw UnsupportedOperationException?
+the requested operaion is not supported
+175 . What is difference between fail-safe and fail-fast iterators?
+fail safethey operate on clone of the collection
+fail fast they operate on the collection it self and throw error when the value concurrecnt opreation is going on
+176 . What are atomic operations in Java?
+atomic operations are operations which look like simple operations but have multiple steps and lead to inconsistancy when multiple threads are accssing the values repeatedly.
+177 . What is BlockingQueue in Java?
+Generics
+178 . What are Generics?
+the vaules beteen <> in hasmap this actually is using data types to be used as types for maps
+179 . Why do we need Generics? Can you give an example of how Generics make a program more flexible?
+180 . How do you declare a generic class?
+181 . What are the restrictions in using generic type that is declared in a class declaration?
+182 . How can we restrict Generics to a subclass of particular class?
+183 . How can we restrict Generics to a super class of particular class?
+184 . Can you give an example of a generic method?
+Multi threading
+185 . What is the need for threads in Java?
+it uses multple threads provided by cpu to speed up the process.
+186 . How do you create a thread?
+extend thread
+provide run meadhod and start the thread
+187 . How do you create a thread by extending thread class?
+188 . How do you create a thread by implementing runnable interface?
+189 . How do you run a thread in Java?
+.start
+190 . What are the different states of a thread?
+new runnable blocked waiting thread waiting terminated
+191 . What is priority of a thread? How do you change the priority of a thread?
+thread with higher pripority exceute fist while the thread with lowes priority executes last
+.setpriority
+192 . What is executorservice?
+executer service is a service which is uesed to run the code asynchornously.this is especially use for with ui and data retreival
+193 . Can you give an example for executorservice?
+194 . Explain different ways of creating executor services .
+195 . How do you check whether an executionservice task executed successfully?
+196 . What is callable? How do you execute a callable from executionservice?
+197 . What is synchronization of threads?
+198 . Can you give an example of a synchronized block?
+199 . Can a static method be synchronized?
+200 . What is the use of join method in threads?
+201 . Describe a few other important methods in threads?
+202 . What is a deadlock?
+203 . What are the important methods in Java for inter-thread communication?
+204 . What is the use of wait method?
+205 . What is the use of notify method?
+206 . What is the use of notifyall method?
+207 . Can you write a synchronized program with wait and notify methods?
+Functional Programming - Lamdba expressions and Streams
+208 . What is functional programming?
+209 . Can you give an example of functional programming?
+210 . What is a stream?
+211 . Explain about streams with an example?
+what are intermediate operations in streams?
+212 . What are terminal operations in streams?
+213 . What are method references?
+214 . What are lambda expressions?
+215 . Can you give an example of lambda expression?
+216 . Can you explain the relationship between lambda expression and functional interfaces?
+217 . What is a predicate?
+218 . What is the functional interface - function?
+219 . What is a consumer?
+220 . Can you give examples of functional interfaces with multiple arguments?
+New Features
+221 . What are the new features in Java 5?
+222 . What are the new features in Java 6?
+223 . What are the new features in Java 7?
+224 . What are the new features in Java 8?
