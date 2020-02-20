@@ -406,29 +406,41 @@ executer service is a service which is uesed to run the code asynchornously.this
 194 . Explain different ways of creating executor services .
 195 . How do you check whether an executionservice task executed successfully?
 196 . What is callable? How do you execute a callable from executionservice?
+callable statement is a better version of runnable where the thread can returna value and also check for checked exception
 197 . What is synchronization of threads?
+this means that the data accessed by the threads needs to be syncronized as other threads might have manupulated the data
 198 . Can you give an example of a synchronized block?
+it is used to synchronize only particulat parts of the code.
 199 . Can a static method be synchronized?
 200 . What is the use of join method in threads?
 201 . Describe a few other important methods in threads?
 202 . What is a deadlock?
+dead lock occurs when multiple threads try to access the same reqources but the first reaource needs the second reaource to complte the task
 203 . What are the important methods in Java for inter-thread communication?
+wait notify and notify all
 204 . What is the use of wait method?
+a thread calls wait to wait for the resource to be available
 205 . What is the use of notify method?
+notify meathod notifies the thread which called wait to come and fetch resource
 206 . What is the use of notifyall method?
+wakes up all the threads that called the wait opration
 207 . Can you write a synchronized program with wait and notify methods?
 Functional Programming - Lamdba expressions and Streams
 208 . What is functional programming?
 209 . Can you give an example of functional programming?
 210 . What is a stream?
+it is a new package in java 8 whcih is used to perform aggreate filter foreach etc operations on collections.
 211 . Explain about streams with an example?
 what are intermediate operations in streams?
 212 . What are terminal operations in streams?
 213 . What are method references?
 214 . What are lambda expressions?
+it only implements only abstract classes and is used for with interfaces with only one function.
+ex: int of x -> 2*x  here of int x is function with values int x and 2*x is the body.
 215 . Can you give an example of lambda expression?
 216 . Can you explain the relationship between lambda expression and functional interfaces?
 217 . What is a predicate?
+predicate is just a boolean with lambda as a fuction.
 218 . What is the functional interface - function?
 219 . What is a consumer?
 220 . Can you give examples of functional interfaces with multiple arguments?
@@ -436,4 +448,11 @@ New Features
 221 . What are the new features in Java 5?
 222 . What are the new features in Java 6?
 223 . What are the new features in Java 7?
+strings in switch
+handling multiple exceptions for same tryusing pipe
+@safevarargs annotation
 224 . What are the new features in Java 8?
+foreach meathod in iterator
+interfaces have deafult and static meathods
+java time api for time
+java stream api
